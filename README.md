@@ -14,7 +14,7 @@ They are essentially wrappers around `assert(type(var) == "type")` and `pcall(as
 Enforcing the type of a variable and throwing an error if it's mismached:
 
 ```lua
-local c, t = require("moonkind") -- c for "Check", t for "Throw"
+local t = require("moonkind.throws")
 
 local my_string = t.str("Hello there") -- Just returns the string
 local not_string = t.str(12) -- Fails with error "Incorrect type: (12) is not a string"
@@ -23,11 +23,15 @@ local not_string = t.str(12) -- Fails with error "Incorrect type: (12) is not a 
 Indicating the variable type but having the option to decide yourself how to handle it in case you get a mismatched type:
 
 ```lua
+local c = require("moonkind.checks")
+
 local success, my_integer = c.int(45) -- It returns a boolean first (true here), the variable second
 local success, not_integer = c.int(67.8) -- It won't throw, but will return "false" and "not_integer" now contains the error message
 ```
 
 ## Installation
+
+Luarocks: `luarocks install moonkind` is all that's needed. Use the option most adequate to your use case, either installing it globally or per project.
 
 Manually: copy `lua/moonkind` directory into your Lua module path. It's typically `/usr/local/share/lua/5.x` on a Linux system and `C:\Program Files\Lua\5.x\lua` for Lua for Windows if you want it to be system-wide. To have it installed per-project, just copy `lua/moonkind` into your project's root.
 
@@ -74,9 +78,9 @@ TL;DR: If you want a familiar type-checking syntax and possible a lot of other f
 
 MoonKind gives you two ways of checking for types: Either by direct assertion which will throw an error on type mismatch, or by giving you two returns, containing a type-match success boolean and a <given_variable | error>.
 
-It does this by having two implementations for each type-check function, and you get to choose which one you want to use at any given time by picking which of the two imported objects given by `require("moonkind")`.
+It does this by having two implementations for each type-check function, and you get to choose which one you want to use at any given time by picking between `require("moonkind.checks)` or `require("moonkind.throws)`
 
-`require("moonkind")` will return `c` and `t`. Here, `c` is the object with methods for only **C**hecking types (no error throwing), while `t` is the object with methods for **T**hrowing errors in case of type mismatch. The interface for both is the same:
+`checks` contains methods for only **C**hecking types (no error throwing) and giving you possible errors as values, while `throws` has methods for **T**hrowing errors in case of type mismatch. The interface for both is the same:
 
 ```lua
 c.tbl({1, 2, 3}) -- Returns "true" and {1, 2, 3}
