@@ -29,8 +29,6 @@ local success, not_integer = c.int(67.8) -- It won't throw, but will return "fal
 
 ## Installation
 
-[//]: # (Using [LuaRocks](https://luarocks.org): run `luarocks install penlight` to install globally, or `luarocks install --tree ./modules/ moonkind` to install on your current project's tree.)
-
 Manually: copy `lua/moonkind` directory into your Lua module path. It's typically `/usr/local/share/lua/5.x` on a Linux system and `C:\Program Files\Lua\5.x\lua` for Lua for Windows if you want it to be system-wide. To have it installed per-project, just copy `lua/moonkind` into your project's root.
 
 ## Versioning
