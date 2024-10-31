@@ -55,10 +55,10 @@ Both will work similarly, so this library provides you an option in how you want
 
 |                 | Transpiled languages | Moonkind |
 | --------------- | -------------------- | -------- |
-| Familiar syntax | - [x]                | - [ ]    |
-| Type checking   | - [x]                | - [x]    |
-| Other features  | - [x]                | - [ ]    |
-| No build step   | - [ ]                | - [x]    |
+| Familiar syntax | ✅                   | ❌       |
+| Type checking   | ✅                   | ✅       |
+| Other features  | ✅                   | ❌       |
+| No build step   | ❌                   | ✅       |
 
 TL;DR: If you want a familiar type-checking syntax and possible a lot of other features, a transpiled Lua dialect is probably a more adequate solution. However if you just want basic type-checking and would like to avoid transpiling scripts, you can give MoonKind a spin.
 
