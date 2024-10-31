@@ -1,6 +1,6 @@
 -- moonkind-0.1.1.rockspec
 local package_name = "moonkind"
-local package_version = "0.1.1"
+local package_version = "0.1.0"
 local rockspec_revision = "1"
 local github_account_name = "VicCAlq"
 local github_repo_name = package_name
