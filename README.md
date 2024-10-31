@@ -75,7 +75,7 @@ c.tbl({1, 2, 3}) -- Returns "true" and {1, 2, 3}
 t.tbl({4, 5, 6}) -- Returns {4, 5, 6}
 
 c.bool("True") -- Returns "false" and "Incorrect type: (True) is not a boolean"
-t.tbl("False") -- Throws erro with message "Incorrect type: (False) is not a boolean"
+t.bool("False") -- Throws erro with message "Incorrect type: (False) is not a boolean"
 ```
 
 None of the functions in this library will do type conversion or coercion, either implicitly or explicitly. This is by design, to ensure you're getting precisely what you expect.
