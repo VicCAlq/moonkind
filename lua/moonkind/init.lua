@@ -4,7 +4,7 @@ package.cpath = C.cpath
 
 local M = {}
 
-M.c = assert(require("moonkind.checks"))
-M.t = assert(require("moonkind.throws"))
+M.checks = assert(require("moonkind.checks"))
+M.throws = assert(require("moonkind.throws"))
 
 return M

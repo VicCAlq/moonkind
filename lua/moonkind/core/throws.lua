@@ -72,7 +72,8 @@ end
 ---@param var function The expected value
 ---@return function|nil res Returns the function if valid
 function M.fun(var)
-  local res = assert(type(var) == "function", f("Incorrect type: (%s) is not a function", var))
+  local msg = f("Incorrect type: The given variable is not a function, but a (%s)", type(var))
+  local res = assert(type(var) == "function", msg)
   if res then
     return var
   end

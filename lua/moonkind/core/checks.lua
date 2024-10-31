@@ -104,7 +104,8 @@ end
 ---@return boolean success
 ---@return function|boolean|nil res Returns the function if valid
 function M.fun(var)
-  local success, res = check_type(var, "function", nil, nil)
+  local msg = f("Incorrect type: The given variable is not a function, but a (%s)", type(var))
+  local success, res = check_type(var, "function", nil, msg)
   return success, res
 end
 
