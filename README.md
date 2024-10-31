@@ -62,6 +62,14 @@ Both will work similarly, so this library provides you an option in how you want
 
 TL;DR: If you want a familiar type-checking syntax and possible a lot of other features, a transpiled Lua dialect is probably a more adequate solution. However if you just want basic type-checking and would like to avoid transpiling scripts, you can give MoonKind a spin.
 
+> Why an entire project for such a small feature?
+
+- While working on another project I started doing way too many type assertions, and since they're all too similar it'd be best to make things easier by wrapping them in helpful functions.
+
+> Why not use a compiled/transpiled Lua dialect with typing support?
+
+- To avoid transpilation and reduce the ammount of dependencies per project.
+
 ## Type system
 
 MoonKind gives you two ways of checking for types: Either by direct assertion which will throw an error on type mismatch, or by giving you two returns, containing a type-match success boolean and a <given_variable | error>.
