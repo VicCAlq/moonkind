@@ -4,7 +4,7 @@ M.version = _VERSION:match("%d+%.%d+")
 M.path_full = string.gsub(assert(io.popen("pwd", "r")):read("*a"), "\n", "")
 
 M.luapath = string.format(
-  [[%s/modules/share/lua/%s/?/?.lua;%s/modules/share/lua/%s/?/init.lua;%s/modules/share/lua/%s/?.lua;%s]],
+  [[%s/lua_modules/share/lua/%s/?/?.lua;%s/lua_modules/share/lua/%s/?/init.lua;%s/lua_modules/share/lua/%s/?.lua;%s]],
   M.path_full,
   M.version,
   M.path_full,
@@ -15,7 +15,7 @@ M.luapath = string.format(
 )
 
 M.cpath = string.format(
-  [[%s/modules/lib/lua/%s/?.so;%s/modules/lib/lua/%s/?/?.so;%s]],
+  [[%s/lua_modules/lib/lua/%s/?.so;%s/lua_modules/lib/lua/%s/?/?.so;%s]],
   M.path_full,
   M.version,
   M.path_full,

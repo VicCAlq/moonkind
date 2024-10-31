@@ -2,3 +2,8 @@ modules_raw/
 modules/*/
 
 specs.md
+
+/luarocks
+/lua
+/lua_modules
+/.luarocks
