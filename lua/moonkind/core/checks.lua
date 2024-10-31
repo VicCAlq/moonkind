@@ -1,4 +1,4 @@
-local C = assert(require("lua.moonkind.utils.constants"))
+local C = assert(require("moonkind.utils.constants"))
 package.path = C.luapath
 package.cpath = C.cpath
 

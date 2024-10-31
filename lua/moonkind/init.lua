@@ -1,8 +1,10 @@
-local C = assert(require("lua.moonkind.utils.constants"))
+local C = assert(require("moonkind.utils.constants"))
 package.path = C.luapath
 package.cpath = C.cpath
 
-local c = assert(require("lua.moonkind.core.type_checks"))
-local t = assert(require("lua.moonkind.core.type_throws"))
+local M = {}
 
-return c, t
+M.c = assert(require("moonkind.checks"))
+M.t = assert(require("moonkind.throws"))
+
+return M

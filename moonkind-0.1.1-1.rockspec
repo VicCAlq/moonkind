@@ -58,9 +58,9 @@ test_dependencies = {}
 build = {
   type = "builtin",
   modules = {
-    ["moonkind.core.type_checks"] = "lua/moonkind/core/type_checks.lua",
-    ["moonkind.core.type_throws"] = "lua/moonkind/core/type_throws.lua",
-    ["moonkind.init"] = "lua/moonkind/init.lua",
+    ["moonkind.checks"] = "lua/moonkind/core/checks.lua",
+    ["moonkind.throws"] = "lua/moonkind/core/throws.lua",
+    ["moonkind"] = "lua/moonkind/init.lua",
     ["moonkind.utils.constants"] = "lua/moonkind/utils/constants.lua",
   },
   copy_directories = { "doc" },
